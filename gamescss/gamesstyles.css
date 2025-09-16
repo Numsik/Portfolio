@@ -1,4 +1,6 @@
 body{
+    padding: 0;
+    margin: 0;
     font-family: "Inter";
     display: flex;
     flex-direction: column;
@@ -11,7 +13,7 @@ body{
     font-size: 80px;
 }
 .mode{
-    width: 300px;
+    width: 250px;
     height: 75px;
     border: none;
     border-radius: 30px;
@@ -39,4 +41,16 @@ input{
 }
 .typewihbtn button:hover{
     background-color: rgba(184, 184, 184, 0.377);
+}
+.winloss{
+    font-size: 45px;
+    font-weight: 800;
+}
+footer {
+    background-color: black;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
 }

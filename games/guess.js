@@ -37,10 +37,12 @@ function isittrue(player, pc) {
             whatyouhadtodo.textContent = `Too low, try again`;
             guesses++;
         } else {
+            winloss.style.color = "Green"
             winloss.textContent = `You win`;
             whatyouhadtodo.textContent = '';
         }
     } else {
+        winloss.style.color = "Red"
         winloss.textContent = `You lost`;
         whatyouhadtodo.textContent = '';
     }
