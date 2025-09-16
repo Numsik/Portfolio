@@ -62,7 +62,7 @@ document.querySelector('.easymode').addEventListener('click', () => {
     document.addEventListener('DOMContentLoaded', () => {
         const homeBtn = document.querySelector('.home');
         if (homeBtn) {
-            homeBtn.addEventListener('click', function() {
+            homeBtn.addEventListener('click', () => {
                 window.location.href = '../index.html';
             });
         }
