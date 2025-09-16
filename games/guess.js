@@ -10,6 +10,13 @@ const textselect = document.querySelector('.textselect');
 const whatyouhadtodo = document.querySelector('.whatyouhadtodo');
 const winloss = document.querySelector('.winloss');
 const typinpt = document.querySelector('.typ');
+const home = document.querySelector('.home')
+
+
+home.addEventListener('click', () =>{
+    console.log("TOHLE JDE")
+    window.location.href = "../index.html";
+});
 
 function showinput() {
     showyouinput.style.display = "block";
@@ -51,6 +58,15 @@ function isittrue(player, pc) {
 document.querySelector('.easymode').addEventListener('click', () => {
     max = 10;
     PcMove();
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const homeBtn = document.querySelector('.home');
+        if (homeBtn) {
+            homeBtn.addEventListener('click', function() {
+                window.location.href = '../index.html';
+            });
+        }
+    });
     showinput();
 });
 

@@ -5,4 +5,4 @@ document.querySelector('.guessgame').addEventListener('click', () =>{
 
 
 
-
+console.log( window.location.href)
