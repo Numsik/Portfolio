@@ -11,9 +11,9 @@ body {
     font-family: "Inter";  
 }
 .title{
-    font-size: 60px;
+    font-size: 90px;
     margin-top: 60px;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
 }
 
 .buttons { 
@@ -26,11 +26,11 @@ body {
 }
 
 button {
-    width: 200px;
-    height: 50px;
+    width: 300px;
+    height: 75px;
     border: none;
-    border-radius: 20px;
-    font-size: 20px;
+    border-radius: 35px;
+    font-size: 27px;
     margin: 10px 0;
     background-color: rgba(184, 184, 184, 0.699);
     color: rgb(0, 0, 0);

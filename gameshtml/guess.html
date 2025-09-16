@@ -5,19 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../gamescss/gamesstyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Guessing Game</h1>
-    <div>
-        <button class="easymode">easy</button>
-        <button class="mediummode">medium</button>
-        <button class="hardmode">hard</button>
+    <h1 class="guessingtitle">Guessing Game</h1>
+    <p class="textselect">Select mode please</p>
+    <div class="modeselection">
+        <button class="easymode mode">Easy</button>
+        <button class="mediummode mode">Medium</button>
+        <button class="hardmode mode">Hard</button>
     </div>
 
     <div class="typewihbtn">
-        <input placeholder="your type" class="typ">
+        <input placeholder="Your type" class="typ">
         <button class="SendValues">Send</button>
-        <button class="resetgame">reset game</button>
+        <button class="resetgame">Reset Game</button>
+    </div>
+    <div class="answer">
+        <p class="yourgues"></p>
+        <p class="whatyouhadtodo"></p>
+        <p class="winloss"></p>
     </div>
     
 
