@@ -1,3 +1,8 @@
+
 document.querySelector('.guessgame').addEventListener('click', () =>{
-    console.log('juj')
+    window.location.href = "./gameshtml/guess.html";
 })
+
+
+
+
