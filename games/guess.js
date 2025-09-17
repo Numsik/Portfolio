@@ -14,7 +14,6 @@ const home = document.querySelector('.home')
 
 
 home.addEventListener('click', () =>{
-    console.log("TOHLE JDE")
     window.location.href = "../index.html";
 });
 

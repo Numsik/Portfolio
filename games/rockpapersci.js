@@ -1,15 +1,43 @@
 const rock = document.querySelector('.Rock');
 const paper = document.querySelector('.Paper');
-const scissors = document.querySelector('.Scissors')
+const scissors = document.querySelector('.Scissors');
+const winloss = document.querySelector('.winloss')
+const scoretext = document.querySelector('.score');
+const answers = document.querySelector('.answers');
+
+
+document.querySelector('.home').addEventListener('click', () =>{
+    window.location.href = "../index.html"
+})
+
+let score = 0;
 let pcmove;
 let playermove;
+
+
+rock.addEventListener('click', () =>{
+    computer();
+    playerpick('rock');
+    whowin(playermove, pcmove)
+})
+paper.addEventListener('click', () =>{
+    computer();
+    playerpick('paper');
+    whowin(playermove, pcmove)
+})
+scissors.addEventListener('click', () =>{
+    computer();
+    playerpick('scissors');
+    whowin(playermove, pcmove)
+})
+
+
 
 
 
 
 function computer(){
-    let number = Math.random() * (3 - 0) + 0;
-    console.log(number)
+    let number = Math.random() * 3;
     if (number < 1){
         pcmove = "scissors"
     }else if(number < 2){
@@ -19,7 +47,8 @@ function computer(){
     }
     console.log(pcmove)
 }
-computer();
+
+
 function playerpick(move){
     if (move === "scissors"){
         playermove = "scissors"
@@ -28,16 +57,37 @@ function playerpick(move){
     }else{
         playermove = "paper"
     }
+    console.log(playermove)
 
 }
 function whowin(player, pc){
+    answers.innerHTML = `You pick: <span class="bigger">${playermove}</span>  <br></br> Pc pick: <span class="bigger">${pcmove}</span>`
     if (player === "scissors" && pc === "paper"){
-        console.log("player win")
+        winloss.textContent = `You win`
+        winloss.style.color = "Green"
+        score++;
+        scoretext.textContent = `Wins: ${score}`
     }else if (player === "rock" && pc === "scissors"){
-        console.log("player won")
+       winloss.textContent = "You win"
+       winloss.style.color = "Green"
+       score++;
+       scoretext.textContent = `Wins: ${score}`
     }else if (player === "paper" && pc === "rock"){
-        console.log("player won")
+        winloss.textContent = "You win"
+        winloss.style.color = "Green"
+        score++;
+        scoretext.textContent = `Wins: ${score}`
+    }else if (player === "scissors" && pc === "scissors"){
+        winloss.textContent = "Tie"
+        winloss.style.color = "Black"
+    }else if (player === "rock" && pc === "rock"){
+        winloss.textContent = "Tie"
+        winloss.style.color = "Black"
+    }else if (player === "paper" && pc === "paper"){
+        winloss.textContent = "Tie"
+        winloss.style.color = "Black"
     }else{
-        console.log("pc wonn")
+        winloss.textContent = "You Lost"
+        winloss.style.color = "Red"
     }
 }
