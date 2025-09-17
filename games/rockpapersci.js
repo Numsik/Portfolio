@@ -4,6 +4,7 @@ const scissors = document.querySelector('.Scissors');
 const winloss = document.querySelector('.winloss')
 const scoretext = document.querySelector('.score');
 const answers = document.querySelector('.answers');
+const winrate = document.querySelector('.winrate');
 
 
 document.querySelector('.home').addEventListener('click', () =>{
@@ -13,6 +14,7 @@ document.querySelector('.home').addEventListener('click', () =>{
 let score = 0;
 let pcmove;
 let playermove;
+let howmanytimesplayed = 0;
 
 
 rock.addEventListener('click', () =>{
@@ -61,6 +63,11 @@ function playerpick(move){
 
 }
 function whowin(player, pc){
+    howmanytimesplayed ++;
+    let howmuchwin = Math.round((score / howmanytimesplayed) * 100)
+    winrate.textContent = `Winrate : ${howmuchwin}%`
+
+    console.log(howmanytimesplayed)
     answers.innerHTML = `You pick: <span class="bigger">${playermove}</span>  <br></br> Pc pick: <span class="bigger">${pcmove}</span>`
     if (player === "scissors" && pc === "paper"){
         winloss.textContent = `You win`
