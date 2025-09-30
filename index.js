@@ -8,5 +8,6 @@ document.querySelector('.rockpaperscissors').addEventListener('click', () =>{
 });
 
 
-
-console.log( window.location.href)
+document.querySelector('.crossgame').addEventListener('click', () =>{
+    window.location.href = "./gameshtml/cross.html"
+});
