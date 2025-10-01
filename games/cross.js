@@ -9,6 +9,7 @@ const boardelement = document.querySelector('.board');
 const resetgame = document.querySelector('.resetgame');
 const playgame =  document.querySelector('.playgame');
 const showgame = document.querySelector('.showonplaybtn');
+const textwhowon = document.querySelector('.whowon')
 
 playgame.addEventListener('click', () =>{
     showgame.style.display = "flex";
@@ -49,7 +50,7 @@ function checkwin() {
   for (let combo of wins) {
     const [a, b, c] = combo;
     if (crossboard[a] && crossboard[a] === crossboard[b] && crossboard[a] === crossboard[c]) {
-      alert(`${crossboard[a]} vyhrál!`);
+      textwhowon.textContent = `${crossboard[a]} won!`;
       return;
     }
   }
@@ -58,6 +59,7 @@ resetgame.addEventListener('click', () =>{
     crossboard = ["", "", "", "", "", "", "", "", ""];
     currentplayer = "X"
     renderboard();
+    textwhowon.textContent = "";
 })
 
 
