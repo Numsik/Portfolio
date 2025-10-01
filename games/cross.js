@@ -7,10 +7,14 @@ let crossboard = ["", "", "", "", "", "", "", "", ""];
 
 const boardelement = document.querySelector('.board');
 const resetgame = document.querySelector('.resetgame');
+const playgame =  document.querySelector('.playgame');
+const showgame = document.querySelector('.showonplaybtn');
 
-resetgame.addEventListener('click', () =>{
-    crossboard = ["", "", "", "", "", "", "", "", ""];
-})
+playgame.addEventListener('click', () =>{
+    showgame.style.display = "flex";
+});
+
+
 function renderboard() {
   boardelement.innerHTML = "";
   crossboard.forEach((cell, i) => {
@@ -50,6 +54,11 @@ function checkwin() {
     }
   }
 }
+resetgame.addEventListener('click', () =>{
+    crossboard = ["", "", "", "", "", "", "", "", ""];
+    currentplayer = "X"
+    renderboard();
+})
 
 
 renderboard();

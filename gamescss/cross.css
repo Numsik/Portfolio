@@ -11,6 +11,17 @@ body h1{
     font-size: 80px;
     margin-top: 80px;
 }
+body button{
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+body button:hover{
+    background-color: rgba(184, 184, 184, 0.473);
+}
 .home{
     position: absolute;
     top: 20px;
@@ -20,6 +31,13 @@ body h1{
     cursor: pointer;
 }
 
+.showonplaybtn{
+    margin: 40px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
 
 .board {
   display: grid;
